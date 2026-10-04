@@ -8,6 +8,8 @@ export function useColorScheme() {
   const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    // Keep the first web paint light for static rendering, then read the real scheme.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate once after mount
     setHasHydrated(true);
   }, []);
 

@@ -12,6 +12,7 @@ export default function TabLayout() {
       backgroundColor={colors.background}
       indicatorColor={colors.backgroundElement}
       labelStyle={{ selected: { color: colors.text } }}>
+
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Feed</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
@@ -19,6 +20,7 @@ export default function TabLayout() {
           md={{ default: 'home', selected: 'home_filled' }}
         />
       </NativeTabs.Trigger>
+
       <NativeTabs.Trigger name="chat">
         <NativeTabs.Trigger.Label>Chat</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
@@ -26,6 +28,7 @@ export default function TabLayout() {
           md={{ default: 'chat', selected: 'chat_bubble' }}
         />
       </NativeTabs.Trigger>
+
       <NativeTabs.Trigger name="notifications">
         <NativeTabs.Trigger.Label>Notifications</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
@@ -33,6 +36,7 @@ export default function TabLayout() {
           md={{ default: 'notifications', selected: 'notifications' }}
         />
       </NativeTabs.Trigger>
+
       <NativeTabs.Trigger name="profiles">
         <NativeTabs.Trigger.Label>Profiles</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
@@ -40,6 +44,7 @@ export default function TabLayout() {
           md={{ default: 'person', selected: 'person' }}
         />
       </NativeTabs.Trigger>
+      
     </NativeTabs>
   );
 }

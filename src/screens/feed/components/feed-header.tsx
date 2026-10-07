@@ -4,7 +4,6 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export function FeedHeader() {
   const colors = useTheme();
-
   return (
     <View
       style={[
@@ -23,36 +22,13 @@ export function FeedHeader() {
         resizeMode="contain"
       />
       <View style={styles.headerIcons}>
-        <TouchableOpacity
-          style={[
-            styles.iconButton,
-            { backgroundColor: colors.backgroundElement },
-          ]}
+        <View
+          style={[styles.input, { backgroundColor: colors.backgroundElement }]}
         >
-          <Text style={styles.iconText}>🔍</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            styles.iconButton,
-            { backgroundColor: colors.backgroundElement },
-          ]}
-        >
-          <Text style={styles.iconText}>▦</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            styles.iconButton,
-            { backgroundColor: colors.backgroundElement },
-          ]}
-        >
-          <Text style={styles.iconText}>💬</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconButton}>
-          <View style={styles.notificationBadge}>
-            <Text style={styles.badgeText}>3</Text>
-          </View>
-          <Text style={styles.iconText}>🔔</Text>
-        </TouchableOpacity>
+          <Text style={[styles.inputText, { color: colors.textSecondary }]}>
+            What's on your mind, Hữu Đức?
+          </Text>
+        </View>
         <TouchableOpacity>
           <Image
             source={{ uri: "https://picsum.photos/100/100?random=5" }}
@@ -114,5 +90,13 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
+  },
+  input: {
+    borderRadius: 20,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  inputText: {
+    fontSize: 16,
   },
 });
